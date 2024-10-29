@@ -1,0 +1,16 @@
+<h1>To Do Lists</h1>
+
+<%= form_with(model: Lista.new, url: listas_path, local: true) do |form| %>
+  <%= form.label :nome, "Nova lista:" %>
+  <%= form.text_field :nome, required: true %>
+  <%= form.submit "Criar Lista" %>
+<% end %>
+
+<h2>Listas Criadas:</h2>
+<ul>
+  <% @listas.each do |lista| %>
+    <li>
+      <%= link_to lista.nome, lista_tarefas_path(lista) %>
+    </li>
+  <% end %>
+</ul>

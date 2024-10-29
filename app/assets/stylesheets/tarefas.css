@@ -1,0 +1,80 @@
+body {
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    font-family: 'Pangolin', cursive; /* Aplica a fonte de escrita à mão */
+    margin: 0; /* Remove margens padrão */
+    padding: 20px; /* Adiciona um pouco de espaço em volta */
+  }
+
+  /* Título da página */
+h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: flex; /* Usar flexbox para alinhar os itens em linha */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    margin-bottom: 10px; /* Espaço abaixo do formulário */
+}
+
+/* Estilo para o campo de texto */
+form input[type="text"] {
+    width: 300px; /* Largura do campo de texto */
+    height: 12px;
+    padding: 10px; /* Espaçamento interno */
+    border: 2px solid #3498db; /* Borda do campo de texto */
+    border-radius: 5px; /* Borda arredondada */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+    margin-right: 10px;
+    margin-left: 10px;  
+}
+
+/* Estilo para o campo de texto ao receber foco */
+form input[type="text"]:focus {
+    border-color: #2980b9; /* Cor da borda ao focar */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Sombra ao focar */
+    outline: none; /* Remove a borda padrão de foco */
+}
+  
+  /* Estilo para o botão */
+input[type="submit"] {
+    background-color: #3498db; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Borda arredondada */
+    padding: 10px 15px; /* Espacamento interno */
+    cursor: pointer; /* Cursor em forma de mão ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+input[type="submit"]:hover {
+    background-color: #2980b9; /* Cor do botão ao passar o mouse */
+}
+
+/* Lista de Tarefas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+li {
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+

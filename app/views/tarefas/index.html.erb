@@ -1,0 +1,19 @@
+<h1>Tarefas para: <%= @lista.nome %></h1>
+
+<%= form_with(model: [@lista, Tarefa.new],url: lista_tarefas_path(@lista), local: true) do |form| %>
+  <%= form.label :nome, "Nova tarefa:" %>
+  <%= form.text_field :nome, required: true %>
+  <%= form.submit "Adicionar Tarefa" %>
+<% end %>
+
+<h2>Tarefas:</h2>
+<ul>
+  <% @tarefas.each do |tarefa| %>
+    <li>
+      <%= check_box_tag "concluida[#{tarefa.id}]", 1, tarefa.concluida, onchange: "this.form.submit();" %>
+      <%= tarefa.nome %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Voltar", root_path %>
