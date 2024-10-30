@@ -11,6 +11,7 @@
   <% @listas.each do |lista| %>
     <li>
       <%= link_to lista.nome, lista_tarefas_path(lista) %>
+      <%= link_to "Excluir", lista_path(lista), data: { "turbo-method": :delete }, class: "botao-excluir" %>
     </li>
   <% end %>
 </ul>

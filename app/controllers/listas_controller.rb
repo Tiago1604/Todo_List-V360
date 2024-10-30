@@ -11,6 +11,12 @@ class ListasController < ApplicationController
         render :index
       end
     end
+
+    def destroy
+      @lista = Lista.find(params[:id])
+      @lista.destroy
+      redirect_to listas_path, notice: 'Lista excluída com sucesso.'
+    end
   
     private
   
