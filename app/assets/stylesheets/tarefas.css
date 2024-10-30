@@ -78,3 +78,19 @@ li {
   }
 
 
+/* Estilizando o botão "Voltar" */
+.botao-voltar {
+    display: inline-block;
+    background-color: #3498db; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 16px;
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse */
+.botao-voltar:hover {
+    background-color: #2980b9; /* Cor ao passar o mouse */
+}
