@@ -13,6 +13,12 @@ class TarefasController < ApplicationController
         render :index
       end
     end
+
+    def destroy
+      @tarefa = @lista.tarefas.find(params[:id])
+      @tarefa.destroy
+      redirect_to lista_tarefas_path(@lista), notice: 'Tarefa excluída com sucesso.'
+    end
     
     def update
       @tarefa = Tarefa.find(params[:id])

@@ -12,6 +12,7 @@
     <li>
       <%= check_box_tag "concluida[#{tarefa.id}]", 1, tarefa.concluida, onchange: "this.form.submit();" %>
       <%= tarefa.nome %>
+      <%= link_to "Excluir", lista_tarefa_path(@lista, tarefa), data: { "turbo-method": :delete }, class: "botao-excluir" %>
     </li>
   <% end %>
 </ul>
